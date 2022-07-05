@@ -1,11 +1,14 @@
 # Crud
 
-Tutorial criado por Eduardo Mendes
+Tutorial criado por Eduardo Mendes.
 Possui adaptações!
 [Youtube Video](https://www.youtube.com/watch?v=WzaKIRJBGXo&t=637s)
 
 - Flask
-
+- flask_sqlalchemy
+- flask_migrate
+- flask_marshmallow
+- marshmallow_sqlalchemy
 
 ## How to run this project.
 
