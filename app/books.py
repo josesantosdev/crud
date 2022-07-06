@@ -15,8 +15,8 @@ def show():
 @bp_books.route('/mostrar/<id>', methods=['GET'])
 def show_by_id(id):
     book = Book.query.filter_by(id=id).first_or_404()
-    books = bs.dump(book)
-    return jsonify(books), 200
+    book_by_id = bs.dump(book)
+    return jsonify(book_by_id), 200
 
     
 @bp_books.route('/cadastrar', methods=['POST'])
@@ -33,13 +33,13 @@ def edit(id):
    query = Book.query.filter(Book.id == id)
    query.update(request.json)
    current_app.db.session.commit()
-   return bs.jsonify(query.first())
+   return bs.jsonify(query.first()), 200
     
 @bp_books.route('/deletar/<id>', methods=['DELETE'])
 def delete(id):
     Book.query.filter(Book.id == id).delete()
     current_app.db.session.commit()
-    return jsonify('Deletado')
+    return jsonify('Deletado'), 200
     
     
     
