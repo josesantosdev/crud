@@ -1,7 +1,7 @@
 # Crud
 
-Tutorial criado por Eduardo Mendes.
-Possui adaptações!
+- Tutorial criado por Eduardo Mendes.
+- Possui adaptações!
 [Youtube Video](https://www.youtube.com/watch?v=WzaKIRJBGXo&t=637s)
 
 - Flask

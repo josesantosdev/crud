@@ -2,6 +2,7 @@ from flask import Blueprint, current_app, jsonify, request
 from .model import Book
 from .serealize import BookSchema
 
+
 bp_books = Blueprint('books', __name__)
 bs = BookSchema()
 
@@ -40,6 +41,5 @@ def delete(id):
     Book.query.filter(Book.id == id).delete()
     current_app.db.session.commit()
     return jsonify('Deletado'), 200
-    
     
     
